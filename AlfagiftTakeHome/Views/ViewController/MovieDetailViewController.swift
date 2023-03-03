@@ -87,10 +87,18 @@ extension MovieDetailViewController: UITableViewDelegate,UITableViewDataSource {
             return cell
         }
         else {
-            let cell = tableView.dequeueReusableCell(withIdentifier: EmptyTableViewCell.identifier,for: indexPath) as! EmptyTableViewCell
-            cell.setupDescription(with: .NoReview)
-            
-            return cell
+            if movieInformation?.reviews.totalResults == 0 {
+                let cell = tableView.dequeueReusableCell(withIdentifier: EmptyTableViewCell.identifier,for: indexPath) as! EmptyTableViewCell
+                cell.setupDescription(with: .NoReview)
+                
+                return cell
+            }
+            else {
+                let cell = tableView.dequeueReusableCell(withIdentifier: MovieReviewTableViewCell.identifier,for: indexPath) as! MovieReviewTableViewCell
+                cell.getReviewList(movieInformation?.reviews.results ?? [])
+                
+                return cell
+            }
         }
     }
     
@@ -104,6 +112,10 @@ extension MovieDetailViewController: UITableViewDelegate,UITableViewDataSource {
             return 300
         }
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
 }
 
 extension MovieDetailViewController {
@@ -112,5 +124,6 @@ extension MovieDetailViewController {
         tableView.register(MovieBackgroundTableViewCell.self, forCellReuseIdentifier: MovieBackgroundTableViewCell.identifier)
         tableView.register(MovieTrailerTableViewCell.self, forCellReuseIdentifier: MovieTrailerTableViewCell.identifier)
         tableView.register(EmptyTableViewCell.self, forCellReuseIdentifier: EmptyTableViewCell.identifier)
+        tableView.register(MovieReviewTableViewCell.self, forCellReuseIdentifier: MovieReviewTableViewCell.identifier)
     }
 }
