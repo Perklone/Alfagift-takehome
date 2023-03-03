@@ -12,7 +12,7 @@ class MovieReviewTableViewCell: UITableViewCell {
     
     var reviewList: [Review] = []
 
-    var collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewLayout())
+    var collectionView:UICollectionView!
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -24,6 +24,7 @@ class MovieReviewTableViewCell: UITableViewCell {
     }
     
     private func configure() {
+        collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewLayout())
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         collectionView.delegate = self
         collectionView.dataSource = self
@@ -36,13 +37,12 @@ class MovieReviewTableViewCell: UITableViewCell {
             collectionView.topAnchor.constraint(equalTo: topAnchor),
             collectionView.leadingAnchor.constraint(equalTo: leadingAnchor,constant: 5),
             collectionView.trailingAnchor.constraint(equalTo: trailingAnchor,constant: -5),
-            collectionView.heightAnchor.constraint(equalToConstant: 150),
+            collectionView.bottomAnchor.constraint(equalTo: bottomAnchor)
         ])
     }
     
     func getReviewList(_ value :[Review]) {
         reviewList.append(contentsOf: value)
-        print(reviewList.count)
         DispatchQueue.main.async {
             self.collectionView.reloadData()
         }

@@ -67,7 +67,7 @@ class NetworkManager {
                 return
             }
             
-            print(url)
+            
             guard let response = response as? HTTPURLResponse, response.statusCode == 200 else {
                 print("Invalid response from the server. Please try again.")
                 return
