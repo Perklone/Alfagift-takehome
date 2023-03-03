@@ -10,8 +10,6 @@ class NetworkManager {
     static let shared = NetworkManager()
     let decoder = JSONDecoder()
     let cache = NSCache<NSString, UIImage>()
-    private var isImageDownloading = false
-    private var imageCallback: ((UIImage?)->Void)?
     private init() {
         decoder.keyDecodingStrategy = .convertFromSnakeCase
     }
@@ -22,7 +20,7 @@ class NetworkManager {
             print("URL Invalid")
             return
         }
-        
+
         let task = URLSession.shared.dataTask(with: URL) { data, response, error in
             if let _ = error {
                 print("Unable to complete your request. Please check your internet connection.")
@@ -46,61 +44,6 @@ class NetworkManager {
             } catch {
                 print("Failed to fetch Movie List.")
             }
-        }
-        task.resume()
-    }
-    
-    func downloadImage(from urlString: String, completed: ((UIImage?)-> Void)?) {
-        let combinedString = MovieBaseURL.imageURL + urlString
-        let cacheKey = NSString(string: combinedString)
-        
-        if let image = cache.object(forKey: cacheKey) {
-            completed?(image)
-            return
-        }
-        
-        print(isImageDownloading)
-        
-        guard !isImageDownloading else {
-            self.imageCallback = completed
-            return
-        }
-        
-        isImageDownloading = true
-        
-        guard let url = URL(string: combinedString) else {
-            print("Invalid URL.")
-            return
-        }
-        
-        print(url)
-        let task = URLSession.shared.dataTask(with: url) { data, response, error in
-            if let _ = error {
-                print("Unable to complete your request. Please check your internet connection.")
-                return
-            }
-            
-            guard let response = response as? HTTPURLResponse, response.statusCode == 200 else {
-                print("Invalid response from the server. Please try again.")
-                return
-            }
-            
-            guard let data = data else {
-                print("The data recieved from the server was invalid. Please try again.")
-                return
-            }
-            guard let image = UIImage(data: data) else {
-                completed?(nil)
-                return
-            }
-            DispatchQueue.main.async {
-                self.imageCallback?(image)
-                self.imageCallback = nil
-                self.cache.setObject(image, forKey: cacheKey)
-                completed?(image)
-                self.isImageDownloading = false
-            }
-            
         }
         task.resume()
     }
@@ -145,7 +88,6 @@ class NetworkManager {
         }
         task.resume()
     }
-    
 }
 
 

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class HomeViewController: UIViewController {
+class HomeViewController: LoadingProgressViewController {
     
     var array: [Movie] = []
     var pageIndex = 1
@@ -21,16 +21,21 @@ class HomeViewController: UIViewController {
         getMovieList(page: pageIndex)
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        navigationItem.largeTitleDisplayMode = .always
+    }
+    
     private func configureInitialView() {
         title = "Alfagift Movie"
         view.backgroundColor = .systemBackground
+        navigationItem.backButtonTitle = ""
     }
     
     private func configureCollectionView() {
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         collectionView.delegate = self
         collectionView.dataSource = self
-        collectionView.prefetchDataSource = self
+        
         collectionView.isPrefetchingEnabled = true
         
         collectionView.register(MainScreenMovieCell.self, forCellWithReuseIdentifier: MainScreenMovieCell.identifier)
@@ -45,18 +50,19 @@ class HomeViewController: UIViewController {
     }
     
     private func getMovieList(page index: Int) {
+        showLoadingView()
         NetworkManager.shared.getPopularMovies(page: index, completion: { response in
             self.array.append(contentsOf: response.results)
             DispatchQueue.main.async {
                 self.collectionView.reloadData()
+                self.dismissLoadingView()
             }
         })
     }
 }
 
-extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDataSourcePrefetching {
-   
-    
+extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return array.count
     }
@@ -66,24 +72,14 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
         let posterPath = array[indexPath.row].posterPath
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MainScreenMovieCell.identifier, for: indexPath) as! MainScreenMovieCell
-        cell.tag = indexPath.row
-        
         cell.updateCell(with: title, and: posterPath)
-        cell.backgroundColor = .systemFill
         
         return cell
     }
-    
+
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let movieDetailVC = MovieDetailViewController(movieID: array[indexPath.row].id)
         navigationController?.pushViewController(movieDetailVC, animated: true)
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, prefetchItemsAt indexPaths: [IndexPath]) {
-        for path in indexPaths {
-            NetworkManager.shared.downloadImage(from: array[path.row].posterPath, completed: nil)
-        }
-        print("Prefetch \(indexPaths)")
     }
 }
 
@@ -94,10 +90,16 @@ extension HomeViewController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let availableWidth = view.bounds.width
-        let padding = 20
-        let width = Int(availableWidth) - (padding*2)
+        let padding = 12
+        let spacingBetweenCell = 10
+        var availableSpace = Int(availableWidth) - padding*2 - spacingBetweenCell
+        availableSpace = availableSpace / 2
         
-        return CGSize(width: width, height: Int(view.bounds.height)/2)
+        return CGSize(width: availableSpace, height: Int(275))
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return UIEdgeInsets(top: 0, left: 12, bottom: 12, right: 12)
     }
 }
 

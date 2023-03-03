@@ -18,7 +18,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        window?.backgroundColor = .systemBackground
         let VC = HomeViewController()
         let navigationController = UINavigationController(rootViewController: VC)
-        navigationController.navigationBar.prefersLargeTitles = true
         window?.rootViewController = navigationController
         
         return true

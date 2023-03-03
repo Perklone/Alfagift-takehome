@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		270ADEF029AD27830078B4B7 /* MovieReviewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270ADEEF29AD27830078B4B7 /* MovieReviewTableViewCell.swift */; };
+		270ADEF229AD42140078B4B7 /* ReviewCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270ADEF129AD42140078B4B7 /* ReviewCollectionViewCell.swift */; };
+		270ADEF429AD42DC0078B4B7 /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 270ADEF329AD42DC0078B4B7 /* AlertViewController.swift */; };
 		27888B9729AB1F71007DA2A2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27888B9629AB1F71007DA2A2 /* AppDelegate.swift */; };
 		27888B9B29AB1F71007DA2A2 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27888B9A29AB1F71007DA2A2 /* HomeViewController.swift */; };
 		27888BA029AB1F72007DA2A2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27888B9F29AB1F72007DA2A2 /* Assets.xcassets */; };
@@ -17,11 +20,31 @@
 		27888BB529AB7250007DA2A2 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27888BB429AB7250007DA2A2 /* Movie.swift */; };
 		27888BB729AC7E46007DA2A2 /* NetworkConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27888BB629AC7E46007DA2A2 /* NetworkConstant.swift */; };
 		27888BB929AC7ED8007DA2A2 /* MovieDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27888BB829AC7ED8007DA2A2 /* MovieDetailViewController.swift */; };
-		2797DFAF29ACC782005742D1 /* StrechyMovieDetailHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2797DFAE29ACC782005742D1 /* StrechyMovieDetailHeaderView.swift */; };
 		2797DFB129ACD41F005742D1 /* MovieInformationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2797DFB029ACD41F005742D1 /* MovieInformationTableViewCell.swift */; };
+		2797DFB429ACEF85005742D1 /* LoadingProgressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2797DFB329ACEF85005742D1 /* LoadingProgressViewController.swift */; };
+		2797DFB629ACF60C005742D1 /* MovieBackgroundTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2797DFB529ACF60C005742D1 /* MovieBackgroundTableViewCell.swift */; };
+		2797DFBC29AD0EF9005742D1 /* CustomImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2797DFBB29AD0EF9005742D1 /* CustomImageView.swift */; };
+		2797DFBE29AD1F73005742D1 /* MovieTrailerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2797DFBD29AD1F73005742D1 /* MovieTrailerTableViewCell.swift */; };
+		27ABF35B29B0428F000B6913 /* NetworkManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27ABF35A29B0428F000B6913 /* NetworkManagerTests.swift */; };
+		27ABF36329B0573C000B6913 /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27ABF36229B0573C000B6913 /* String+Ext.swift */; };
+		27ABF36729B1E89B000B6913 /* EmptyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27ABF36629B1E89B000B6913 /* EmptyTableViewCell.swift */; };
+		63F9F4402FDCD4B676CD720D /* Pods_AlfagiftTakeHome.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CA4F81856FE7289E8CBB625 /* Pods_AlfagiftTakeHome.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		27ABF35C29B0428F000B6913 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 27888B8B29AB1F71007DA2A2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 27888B9229AB1F71007DA2A2;
+			remoteInfo = AlfagiftTakeHome;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		270ADEEF29AD27830078B4B7 /* MovieReviewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieReviewTableViewCell.swift; sourceTree = "<group>"; };
+		270ADEF129AD42140078B4B7 /* ReviewCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewCollectionViewCell.swift; sourceTree = "<group>"; };
+		270ADEF329AD42DC0078B4B7 /* AlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewController.swift; sourceTree = "<group>"; };
 		27888B9329AB1F71007DA2A2 /* AlfagiftTakeHome.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlfagiftTakeHome.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27888B9629AB1F71007DA2A2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		27888B9A29AB1F71007DA2A2 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -34,12 +57,30 @@
 		27888BB429AB7250007DA2A2 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		27888BB629AC7E46007DA2A2 /* NetworkConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConstant.swift; sourceTree = "<group>"; };
 		27888BB829AC7ED8007DA2A2 /* MovieDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailViewController.swift; sourceTree = "<group>"; };
-		2797DFAE29ACC782005742D1 /* StrechyMovieDetailHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrechyMovieDetailHeaderView.swift; sourceTree = "<group>"; };
 		2797DFB029ACD41F005742D1 /* MovieInformationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieInformationTableViewCell.swift; sourceTree = "<group>"; };
+		2797DFB329ACEF85005742D1 /* LoadingProgressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingProgressViewController.swift; sourceTree = "<group>"; };
+		2797DFB529ACF60C005742D1 /* MovieBackgroundTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieBackgroundTableViewCell.swift; sourceTree = "<group>"; };
+		2797DFBB29AD0EF9005742D1 /* CustomImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomImageView.swift; sourceTree = "<group>"; };
+		2797DFBD29AD1F73005742D1 /* MovieTrailerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTrailerTableViewCell.swift; sourceTree = "<group>"; };
+		27ABF35829B0428F000B6913 /* NetworkManagerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NetworkManagerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		27ABF35A29B0428F000B6913 /* NetworkManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManagerTests.swift; sourceTree = "<group>"; };
+		27ABF36229B0573C000B6913 /* String+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Ext.swift"; sourceTree = "<group>"; };
+		27ABF36629B1E89B000B6913 /* EmptyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyTableViewCell.swift; sourceTree = "<group>"; };
+		3523D127135BD90CBD526DF7 /* Pods-AlfagiftTakeHome.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlfagiftTakeHome.release.xcconfig"; path = "Target Support Files/Pods-AlfagiftTakeHome/Pods-AlfagiftTakeHome.release.xcconfig"; sourceTree = "<group>"; };
+		4CA4F81856FE7289E8CBB625 /* Pods_AlfagiftTakeHome.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AlfagiftTakeHome.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		76CCCFF82B403A4D4CAE17C2 /* Pods-AlfagiftTakeHome.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlfagiftTakeHome.debug.xcconfig"; path = "Target Support Files/Pods-AlfagiftTakeHome/Pods-AlfagiftTakeHome.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		27888B9029AB1F71007DA2A2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				63F9F4402FDCD4B676CD720D /* Pods_AlfagiftTakeHome.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		27ABF35529B0428F000B6913 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -53,7 +94,10 @@
 			isa = PBXGroup;
 			children = (
 				27888B9529AB1F71007DA2A2 /* AlfagiftTakeHome */,
+				27ABF35929B0428F000B6913 /* UnitTest */,
 				27888B9429AB1F71007DA2A2 /* Products */,
+				BF5C4330A2BFCB4A695892DD /* Pods */,
+				8F51947BFF2CA8EE548173B0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -61,6 +105,7 @@
 			isa = PBXGroup;
 			children = (
 				27888B9329AB1F71007DA2A2 /* AlfagiftTakeHome.app */,
+				27ABF35829B0428F000B6913 /* NetworkManagerTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -82,26 +127,32 @@
 		27888BAA29AB65B2007DA2A2 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				27888BAB29AB65E5007DA2A2 /* Collection View Cells */,
-				27888BB829AC7ED8007DA2A2 /* MovieDetailViewController.swift */,
-				27888B9A29AB1F71007DA2A2 /* HomeViewController.swift */,
-				2797DFAE29ACC782005742D1 /* StrechyMovieDetailHeaderView.swift */,
+				2797DFBA29AD0EE8005742D1 /* ImageViews */,
+				2797DFB229ACEF56005742D1 /* ViewController */,
+				27888BAB29AB65E5007DA2A2 /* Cells */,
+				270ADEF329AD42DC0078B4B7 /* AlertViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
 		};
-		27888BAB29AB65E5007DA2A2 /* Collection View Cells */ = {
+		27888BAB29AB65E5007DA2A2 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
 				27888BAC29AB6601007DA2A2 /* MainScreenMovieCell.swift */,
 				2797DFB029ACD41F005742D1 /* MovieInformationTableViewCell.swift */,
+				2797DFB529ACF60C005742D1 /* MovieBackgroundTableViewCell.swift */,
+				2797DFBD29AD1F73005742D1 /* MovieTrailerTableViewCell.swift */,
+				270ADEEF29AD27830078B4B7 /* MovieReviewTableViewCell.swift */,
+				270ADEF129AD42140078B4B7 /* ReviewCollectionViewCell.swift */,
+				27ABF36629B1E89B000B6913 /* EmptyTableViewCell.swift */,
 			);
-			path = "Collection View Cells";
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		27888BAE29AB6A3B007DA2A2 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				27ABF36129B05731000B6913 /* Extension */,
 				27888BAF29AB6A52007DA2A2 /* UIHelper.swift */,
 				27888BB129AB7097007DA2A2 /* NetworkManager.swift */,
 				27888BB629AC7E46007DA2A2 /* NetworkConstant.swift */,
@@ -117,6 +168,57 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		2797DFB229ACEF56005742D1 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				27888B9A29AB1F71007DA2A2 /* HomeViewController.swift */,
+				27888BB829AC7ED8007DA2A2 /* MovieDetailViewController.swift */,
+				2797DFB329ACEF85005742D1 /* LoadingProgressViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		2797DFBA29AD0EE8005742D1 /* ImageViews */ = {
+			isa = PBXGroup;
+			children = (
+				2797DFBB29AD0EF9005742D1 /* CustomImageView.swift */,
+			);
+			path = ImageViews;
+			sourceTree = "<group>";
+		};
+		27ABF35929B0428F000B6913 /* UnitTest */ = {
+			isa = PBXGroup;
+			children = (
+				27ABF35A29B0428F000B6913 /* NetworkManagerTests.swift */,
+			);
+			path = UnitTest;
+			sourceTree = "<group>";
+		};
+		27ABF36129B05731000B6913 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				27ABF36229B0573C000B6913 /* String+Ext.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		8F51947BFF2CA8EE548173B0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4CA4F81856FE7289E8CBB625 /* Pods_AlfagiftTakeHome.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BF5C4330A2BFCB4A695892DD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				76CCCFF82B403A4D4CAE17C2 /* Pods-AlfagiftTakeHome.debug.xcconfig */,
+				3523D127135BD90CBD526DF7 /* Pods-AlfagiftTakeHome.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -124,9 +226,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 27888BA729AB1F72007DA2A2 /* Build configuration list for PBXNativeTarget "AlfagiftTakeHome" */;
 			buildPhases = (
+				E6279DAE3138AF0ABCF66AA8 /* [CP] Check Pods Manifest.lock */,
 				27888B8F29AB1F71007DA2A2 /* Sources */,
 				27888B9029AB1F71007DA2A2 /* Frameworks */,
 				27888B9129AB1F71007DA2A2 /* Resources */,
+				2F25485AEEAAF5C15C80C699 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -136,6 +240,24 @@
 			productName = AlfagiftTakeHome;
 			productReference = 27888B9329AB1F71007DA2A2 /* AlfagiftTakeHome.app */;
 			productType = "com.apple.product-type.application";
+		};
+		27ABF35729B0428F000B6913 /* NetworkManagerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 27ABF35E29B0428F000B6913 /* Build configuration list for PBXNativeTarget "NetworkManagerTests" */;
+			buildPhases = (
+				27ABF35429B0428F000B6913 /* Sources */,
+				27ABF35529B0428F000B6913 /* Frameworks */,
+				27ABF35629B0428F000B6913 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				27ABF35D29B0428F000B6913 /* PBXTargetDependency */,
+			);
+			name = NetworkManagerTests;
+			productName = NetworkManagerTests;
+			productReference = 27ABF35829B0428F000B6913 /* NetworkManagerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -149,6 +271,10 @@
 				TargetAttributes = {
 					27888B9229AB1F71007DA2A2 = {
 						CreatedOnToolsVersion = 14.0.1;
+					};
+					27ABF35729B0428F000B6913 = {
+						CreatedOnToolsVersion = 14.0.1;
+						TestTargetID = 27888B9229AB1F71007DA2A2;
 					};
 				};
 			};
@@ -166,6 +292,7 @@
 			projectRoot = "";
 			targets = (
 				27888B9229AB1F71007DA2A2 /* AlfagiftTakeHome */,
+				27ABF35729B0428F000B6913 /* NetworkManagerTests */,
 			);
 		};
 /* End PBXProject section */
@@ -180,27 +307,100 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		27ABF35629B0428F000B6913 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2F25485AEEAAF5C15C80C699 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AlfagiftTakeHome/Pods-AlfagiftTakeHome-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AlfagiftTakeHome/Pods-AlfagiftTakeHome-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AlfagiftTakeHome/Pods-AlfagiftTakeHome-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E6279DAE3138AF0ABCF66AA8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AlfagiftTakeHome-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		27888B8F29AB1F71007DA2A2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				270ADEF029AD27830078B4B7 /* MovieReviewTableViewCell.swift in Sources */,
 				27888B9B29AB1F71007DA2A2 /* HomeViewController.swift in Sources */,
+				2797DFBC29AD0EF9005742D1 /* CustomImageView.swift in Sources */,
+				27ABF36329B0573C000B6913 /* String+Ext.swift in Sources */,
 				27888BAD29AB6601007DA2A2 /* MainScreenMovieCell.swift in Sources */,
 				27888BB229AB7097007DA2A2 /* NetworkManager.swift in Sources */,
+				2797DFBE29AD1F73005742D1 /* MovieTrailerTableViewCell.swift in Sources */,
 				27888B9729AB1F71007DA2A2 /* AppDelegate.swift in Sources */,
+				2797DFB429ACEF85005742D1 /* LoadingProgressViewController.swift in Sources */,
 				27888BB929AC7ED8007DA2A2 /* MovieDetailViewController.swift in Sources */,
+				270ADEF429AD42DC0078B4B7 /* AlertViewController.swift in Sources */,
+				27ABF36729B1E89B000B6913 /* EmptyTableViewCell.swift in Sources */,
 				27888BB729AC7E46007DA2A2 /* NetworkConstant.swift in Sources */,
 				2797DFB129ACD41F005742D1 /* MovieInformationTableViewCell.swift in Sources */,
 				27888BB029AB6A52007DA2A2 /* UIHelper.swift in Sources */,
-				2797DFAF29ACC782005742D1 /* StrechyMovieDetailHeaderView.swift in Sources */,
+				2797DFB629ACF60C005742D1 /* MovieBackgroundTableViewCell.swift in Sources */,
+				270ADEF229AD42140078B4B7 /* ReviewCollectionViewCell.swift in Sources */,
 				27888BB529AB7250007DA2A2 /* Movie.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		27ABF35429B0428F000B6913 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				27ABF35B29B0428F000B6913 /* NetworkManagerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		27ABF35D29B0428F000B6913 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 27888B9229AB1F71007DA2A2 /* AlfagiftTakeHome */;
+			targetProxy = 27ABF35C29B0428F000B6913 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		27888BA129AB1F72007DA2A2 /* LaunchScreen.storyboard */ = {
@@ -330,6 +530,7 @@
 		};
 		27888BA829AB1F72007DA2A2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 76CCCFF82B403A4D4CAE17C2 /* Pods-AlfagiftTakeHome.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -357,6 +558,7 @@
 		};
 		27888BA929AB1F72007DA2A2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3523D127135BD90CBD526DF7 /* Pods-AlfagiftTakeHome.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -382,6 +584,50 @@
 			};
 			name = Release;
 		};
+		27ABF35F29B0428F000B6913 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = YSG9AW6NGQ;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.perklone.NetworkManagerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AlfagiftTakeHome.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/AlfagiftTakeHome";
+			};
+			name = Debug;
+		};
+		27ABF36029B0428F000B6913 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = YSG9AW6NGQ;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.perklone.NetworkManagerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AlfagiftTakeHome.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/AlfagiftTakeHome";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -399,6 +645,15 @@
 			buildConfigurations = (
 				27888BA829AB1F72007DA2A2 /* Debug */,
 				27888BA929AB1F72007DA2A2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		27ABF35E29B0428F000B6913 /* Build configuration list for PBXNativeTarget "NetworkManagerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				27ABF35F29B0428F000B6913 /* Debug */,
+				27ABF36029B0428F000B6913 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

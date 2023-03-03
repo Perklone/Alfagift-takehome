@@ -11,7 +11,7 @@ class MainScreenMovieCell: UICollectionViewCell {
     
     static let identifier = "MainMovieCell"
     
-    var posterImageView = UIImageView()
+    var posterImageView = CustomImageView()
     var categoryNameLabel = UILabel()
     
     
@@ -24,12 +24,11 @@ class MainScreenMovieCell: UICollectionViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
-//    override func prepareForReuse() {
-//        self.categoryNameLabel.text = ""
-//        self.posterImageView.image = nil
-//        
-//        super.prepareForReuse()
-//    }
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        self.categoryNameLabel.text = ""
+        self.posterImageView.image = UIImage(named: "NoPoster")
+    }
     
     private func configure() {
         layer.cornerRadius = 8
@@ -41,36 +40,34 @@ class MainScreenMovieCell: UICollectionViewCell {
         categoryNameLabel.minimumScaleFactor = 0.6
         categoryNameLabel.setContentCompressionResistancePriority(.defaultHigh, for: .horizontal)
         categoryNameLabel.numberOfLines = 2
-        categoryNameLabel.textColor = .white
+        categoryNameLabel.text = ""
+        categoryNameLabel.textAlignment = .center
         
         posterImageView.translatesAutoresizingMaskIntoConstraints = false
         posterImageView.clipsToBounds = true
         posterImageView.layer.cornerRadius = 8
+        posterImageView.contentMode = .scaleToFill
         posterImageView.alpha = 0.8
+        posterImageView.image = UIImage(named: "NoPoster")
         
         addSubview(posterImageView)
         addSubview(categoryNameLabel)
         
         NSLayoutConstraint.activate([
-//            categoryNameLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
-            categoryNameLabel.leadingAnchor.constraint(equalTo: leadingAnchor,constant: 10),
-            categoryNameLabel.trailingAnchor.constraint(equalTo: trailingAnchor,constant: -20),
-            categoryNameLabel.topAnchor.constraint(equalTo: topAnchor,constant: 10),
-            
             posterImageView.topAnchor.constraint(equalTo: topAnchor),
             posterImageView.leadingAnchor.constraint(equalTo: leadingAnchor),
             posterImageView.trailingAnchor.constraint(equalTo: trailingAnchor),
-            posterImageView.bottomAnchor.constraint(equalTo: bottomAnchor)
+            posterImageView.heightAnchor.constraint(equalToConstant: 225),
+            
+//            categoryNameLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
+            categoryNameLabel.leadingAnchor.constraint(equalTo: leadingAnchor,constant: 10),
+            categoryNameLabel.trailingAnchor.constraint(equalTo: trailingAnchor,constant: -10),
+            categoryNameLabel.topAnchor.constraint(equalTo: posterImageView.bottomAnchor,constant: 10),
         ])
     }
     
     func updateCell(with title:String, and imagePath: String) {
         categoryNameLabel.text = title
-        NetworkManager.shared.downloadImage(from: imagePath) { [weak self] image in
-            guard let self = self else { return }
-            DispatchQueue.main.async {
-                self.posterImageView.image = image
-            }
-        }
+        posterImageView.downloadImage(from: imagePath)
     }
 }
